@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI App Skill"
+  short_description: "参考真实 App，研究、生成并走查原创手机端页面"
+  default_prompt: "使用 $ui-app-skill 先研究 UI Notes 等真实 App 参考，再根据产品需求设计一套原创、可实现的手机端页面。"

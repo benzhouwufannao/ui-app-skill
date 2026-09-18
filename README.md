@@ -14,6 +14,8 @@
 
 ## 安装
 
+以下命令使用 [Vercel Labs Skills CLI](https://github.com/vercel-labs/skills)，需要已安装 Node.js 和 npm；`npx` 可直接运行，无需预先全局安装该 CLI。该工具不是 Codex 内置命令。
+
 全局安装：
 
 ```bash

@@ -1,10 +1,10 @@
 # GPT Raster Assets for Mobile UI
 
-Read when a mobile page needs campaign key art, hero imagery, brand illustration, empty-state artwork, or product-specific feature icons. Generate assets as part of the page workflow when useful; do not ask for a second confirmation of already authorized design work.
+Read when a mobile page needs campaign key art, hero imagery, or brand illustration. For empty states and feature icons, read only when the user explicitly requests bitmap artwork or the design contract already records a concrete need for branded imagery. Generate assets as part of the page workflow when useful; do not ask for a second confirmation of already authorized design work.
 
 ## Decide what needs generation
 
-Use original raster artwork when it gives the product a meaningful visual identity, explains a function, or supports the campaign theme. Do not add decoration that displaces the primary task. Default to familiar existing controls for back, search, close, and other utility actions; do not generate each of these independently. If the user explicitly requests bitmap controls throughout, honor that scope while preserving recognizable silhouettes and accessibility.
+Use original raster artwork when it gives the product a meaningful visual identity, explains a function, or supports the campaign theme. Do not add decoration that displaces the primary task. For ordinary empty states, standard feature icons, and controls such as back, search, or close, prefer existing icons or simple graphics. Do not generate these independently merely because an icon or illustration could fit there. A branded-asset decision should name the visual purpose and placement; generic labels such as “distinctive” do not establish a need. If the user explicitly requests bitmap controls throughout, honor that scope while preserving recognizable silhouettes and accessibility.
 
 For generated visual assets, deliver PNG or WebP as appropriate. Do not replace requested artwork with SVG, CSS illustrations, or rasterized vector placeholders. Bitmap format alone does not determine style: choose photographic, tactile, painted, dimensional, or another art direction from the brief rather than automatically producing flat vector-style illustrations. Preserve an explicitly requested style.
 

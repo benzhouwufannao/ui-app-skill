@@ -33,19 +33,9 @@ Inspect the primary screen at its intended size, then stress it with longer cont
 
 For requested visual alternatives, vary meaningful choices such as content density, image treatment, or typographic hierarchy. A palette swap alone is not a distinct design direction. Do not generate alternatives when the user requested one clear solution.
 
-## Compact design contract template
+## Applying the design contract
 
-Fill before building in project notes or the working artifact. Use actual values and brief reasons, not placeholders in the delivered result. For an established design system, reference its tokens and record only changes. This is an internal working record, not a user approval gate.
-
-- Background: [semantic token and value]
-- Primary action: [semantic token and value]
-- Ink / secondary text: [tokens and values]
-- Semantic roles: [success / warning / destructive, where relevant]
-- Spacing rhythm: [selected spacing steps; for example 4 / 8 / 12 / 16 / 24]
-- Component geometry: [radius, border, shadow]
-- List vs card decision: [content and interaction reason]
-- Navigation pattern: [selected pattern and reason]
-- Product-specific detail: [useful expression of this product's identity]
+Use the inline template in [SKILL.md §3](../SKILL.md#3-make-concrete-visual-decisions) as the canonical field list. Record actual values and brief reasons in the project artifact or notes, not unresolved placeholders. For an established system, reference existing tokens and record only changed decisions. This is an internal working record, not a user approval gate. The examples above help resolve the choices.
 
 ## Color token discipline
 

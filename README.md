@@ -32,6 +32,10 @@ git clone https://github.com/benzhouwufannao/ui-app-skill.git ~/.codex/skills/ui
 使用 $ui-app-skill，先研究真实 iOS 工具类 App，再为一款 AI 文件整理产品设计首页、处理页、历史记录和个人中心，生成可交互 HTML 原型。
 ```
 
+请安装或复制整个 Skill 目录，包含 `references/`，不要只复制 `SKILL.md`；参考文件是随仓库分发的本地文档，按任务需要读取。
+
+常见触发表达：“设计一个 App”“做几张手机界面”“优化这个 App 页面”“做可点击原型”“检查手机界面”。普通网站、桌面后台及纯后端任务不在本 Skill 范围内。
+
 更多调用方式见 [examples/example-prompts.md](examples/example-prompts.md)。
 
 ## 工作流程
@@ -42,6 +46,12 @@ git clone https://github.com/benzhouwufannao/ui-app-skill.git ~/.codex/skills/ui
 4. 将视觉方向落实为具体规则，先验证代表性页面，再扩展共享组件。
 5. 生成可见、可运行的页面或代码。
 6. 操作核心流程并检查布局，区分实际验证、静态检查与未验证项。
+
+## 执行环境
+
+- 页面生成需要工作区文件写入能力；视觉与交互验收需要浏览器或对应原生运行环境。环境不足时明确标记未验证项。
+- GPT 位图生成为按需能力，需要当前环境提供相应生图工具；普通空状态和标准图标优先复用，不强制生图。
+- 原生实现沿用现有工程与技术栈，环境支持时执行构建；不以孤立片段替代完整实现。
 
 ## 免费与第三方来源
 

@@ -1,125 +1,100 @@
 ---
 name: ui-app-skill
-description: Research real mobile product references, then design, generate, iterate, and review original app screens without requiring Sleek or another paid third-party API. Use for iOS or Android product flows, app UI mockups, mobile prototypes, portfolio case-study screens, or converting a mobile design direction into runnable HTML, React Native, or SwiftUI.
+description: 当用户想要设计、生成、改版或评审手机端 App 界面时使用，适用于 iOS、Android 的单页设计、多页面流程、交互原型，以及在现有框架中实现移动端设计。当用户说“设计一个 App”“做几张手机界面”“生成移动端 UI”“优化这个 App 页面”“参考这张图设计”“做可点击原型”“检查手机界面”或“让页面更有原生感”时触发。结合真实 App 参考，明确视觉层级、组件样式、平台交互和关键状态，交付原创、可查看、可继续编辑的页面；需要实现时沿用用户指定的 HTML、React Native、SwiftUI、Flutter 等技术栈。已有页面的局部修改沿用现有设计系统。普通网站、桌面后台、营销文案，以及不涉及界面设计的纯后端或构建配置任务不使用此 Skill。
 ---
 
 # UI App Design
 
-Create a coherent mobile product experience grounded in real shipped interfaces that the user can see, evaluate, and continue editing. Work locally with the tools already available in Codex. Public web references may be used, but do not require a third-party account, API key, subscription, or hosted design service.
+Create a coherent mobile experience that the user can see, operate, and continue editing. Work with available local tools; public references may inform the design, but no paid design service, account, or API key is required.
 
-## Choose the Deliverable
+## Route the request
 
-Infer the lightest useful output from the request:
+Inspect supplied artifacts and existing project conventions first. Preserve the user's framework, design system, accepted decisions, and requested scope. Infer missing details conservatively; ask only when an unresolved choice materially changes the result.
 
-- For exploration, produce a concise screen map, design direction, and key screen specification.
-- For a visible design, create a runnable mobile-width HTML prototype unless the user requested another format.
-- For implementation, use the requested framework: React Native/Expo, SwiftUI, Flutter, or HTML/CSS/JS.
-- For review, inspect the supplied screenshots, recording, prototype, or design link and return prioritized, actionable findings.
-- For a portfolio, optimize both the product screens and how the design decisions are presented; do not merely decorate weak product logic.
+| Request | Workflow |
+|---|---|
+| New app or substantial redesign | Product model → relevant references → representative screen → shared system → remaining screens → verification |
+| Local revision | Inspect current screen and shared components → targeted change → verify affected screens; research only for an unresolved design question |
+| Design from references | Inspect supplied images → extract transferable rules → original composition → compare and verify |
+| Review | Inspect available evidence → prioritized findings and corrections; do not rebuild unless requested |
+| Native implementation | Inspect framework and target versions → load applicable platform guidance → implement and run relevant checks |
+| Portfolio | Improve product logic and screen selection, then presentation; do not invent research, metrics, or user outcomes |
 
-Do not ask the user to choose a format when their intended output is already clear.
+For exploration, a screen map and design direction may suffice. For a requested visible design, default to an interactive mobile HTML prototype unless another format or an existing app project establishes the deliverable. Native implementation requests require the requested native deliverable. Do not ask users to reconfirm a clear output choice.
 
-## Design Workflow
+## 1. Model the core journey
 
-### 1. Establish the product model
+Identify the primary user, main task, success moment, essential content, and platform. Map only the screens needed for that journey. Specify entry, primary action, result, back/cancel behavior, and relevant failure recovery. Use credible domain content and realistic text lengths.
 
-Extract the primary user, their main job, the success moment, essential content, constraints, and platform. When details are missing, make conservative, reversible assumptions and label only assumptions that materially affect the design.
+Include loading, empty, failure, offline, permission, or destructive states only when the journey needs them. Distinguish initial loading from a genuinely empty result. Do not expand a narrow request into an entire app.
 
-Turn the request into a small screen map. Include only screens and states needed to complete the core journey. Add empty, loading, error, permission, offline, or destructive-confirmation states when they are genuinely relevant.
+## 2. Research decisions that need evidence
 
-### 2. Ground new designs in real products
+For a new design or unfamiliar interaction, inspect a small, diverse set of real product screens. Existing project rules and user references take precedence. Skip new retrieval for a narrow revision or when supplied evidence is sufficient.
 
-For a new product, redesign, or unfamiliar interaction, research a small set of real mobile screens before committing to layout. Search by product category, user task, platform, and interaction rather than vague visual adjectives. Examples: `iOS document scanner result screen`, `habit tracker empty state`, or `mobile finance transaction filter`.
+Read [reference-research.md](references/reference-research.md) when researching. Search by user task and platform; UI Notes is a useful first discovery source for Chinese-market products, not a mandatory gate. Record what was actually inspected and which design decision it supports. Never infer interactive behavior solely from a static screenshot.
 
-Prefer public, inspectable sources. For Chinese-market mobile products, check UI Notes first when it has a relevant public App or screenshot page, then supplement it with UIZZE, official App Store or Google Play listings, and other established reference libraries. Paid catalogue access may be used only when it is already available; never make membership a prerequisite.
+Synthesize structural lessons across products without copying branding, proprietary content, or a recognizably identical composition. If retrieval fails, proceed with supplied evidence and platform conventions, stating material limits.
 
-Read [references/reference-research.md](references/reference-research.md) for source selection, comparison, attribution, and originality rules. Skip reference retrieval when the user supplies sufficient references or when the request is only a narrow change to an established design system.
+## 3. Make concrete visual decisions
 
-Summarize the useful evidence before designing:
+Read [visual-craft.md](references/visual-craft.md) for new designs or substantial visual changes. Establish a compact design contract in the working artifact or project notes so later revisions can reuse it:
 
-- the screen or flow question each reference answers;
-- recurring structural and interaction patterns;
-- meaningful differences between products;
-- patterns to adopt, adapt, or reject for this product;
-- source links and platform.
+- first-view priority and secondary content;
+- product personality and its concrete expression;
+- semantic color roles, text hierarchy, spacing rhythm, and component geometry;
+- content-driven choice of lists, groups, grids, or cards;
+- navigation, imagery, and one product-specific detail when useful.
 
-Do not select a single app as a template. Synthesize across references and preserve the target product's own content, brand, hierarchy, and interaction logic.
+Fill the compact contract template in [visual-craft.md](references/visual-craft.md) before building; for existing projects, record only changed decisions. Use semantic color tokens: CSS variables for HTML component styles and the existing theme system for native code.
 
-### 3. Commit to one visual direction
+Resolve these into actual tokens and component behavior. Avoid adjective-only directions. For an existing system, record only necessary changes rather than replacing the system.
 
-Write a short internal design contract before implementation:
+## 4. Validate a representative screen, then expand
 
-- product personality in 2–3 adjectives;
-- color strategy and semantic roles;
-- typography character and hierarchy;
-- spacing density and content rhythm;
-- component geometry, elevation, borders, and navigation treatment;
-- imagery or illustration behavior;
-- one distinctive visual detail tied to the product.
+Before validating the representative screen, check that the design contract records applicable visual decisions, layout thresholds, and observable acceptance criteria. Fill gaps from the user’s requirements and existing design system first; otherwise record conservative, reversible defaults. Resolve placeholders before checking the screen. Do not mark a check passed when its acceptance criterion is missing. This is an internal prerequisite, not a user confirmation gate.
 
-Translate the reference findings into the design contract. Use references for principles and patterns, not copied branding, proprietary content, imagery, or a recognizably identical composition. Keep standard navigation and interaction recognizable unless experimentation is the product goal.
+For multi-screen work, build and inspect one representative screen before propagating its styles. Add a structurally different screen if needed to test the system, such as a dense list paired with a detail or form. Correct weak hierarchy, unrealistic density, or inflexible components first. This is an internal iteration step, not an additional approval gate.
 
-### 4. Design the system before duplicating screens
+Extract shared tokens and components from this working design, then expand the remaining requested screens. Keep the same semantic action consistent across screens. Avoid a rigid starter template that gives every app the same card grid or dashboard.
 
-Define reusable tokens for color, typography, spacing, radii, strokes, elevation, motion, and safe-area behavior. Build repeated UI from shared components. The same semantic action must look and behave consistently across screens.
+Read [platform-checklist.md](references/platform-checklist.md) for platform-sensitive work; it routes to iOS or Android guidance. Read only the relevant platform. Preserve existing framework conventions and check official documentation for version-sensitive APIs or platform rules before relying on them.
 
-Respect platform ergonomics:
+## 5. Produce an operable artifact
 
-- minimum touch target: 44×44 pt on iOS, 48×48 dp on Android;
-- preserve safe areas and keyboard avoidance;
-- keep primary actions reachable and visually unambiguous;
-- support dynamic text rather than relying on fixed-height text containers;
-- provide visible focus, disabled, pressed, loading, success, and error states where applicable;
-- avoid gesture conflicts with system back and home gestures.
+Create real files and preview or render them. A verbal description alone does not complete a visual-design request.
 
-Read [references/platform-checklist.md](references/platform-checklist.md) when designing native navigation, gestures, forms, system dialogs, or cross-platform variants.
-
-### 5. Make a visible artifact
-
-When producing a prototype, create real files in the current workspace and render or preview them. A static verbal description is not a completed visual-design request.
+For HTML prototypes, read [mobile-html-layout.md](references/mobile-html-layout.md) before implementation and follow its measurement-and-repair procedure before delivery. Project-specific colors, dimensions, and density targets belong in the project design contract, not universal defaults.
 
 For HTML prototypes:
 
-- use a mobile viewport and responsive bounds rather than a fixed screenshot canvas;
-- keep each screen reachable through obvious navigation or a screen switcher;
-- use semantic HTML and CSS variables for the design tokens;
-- implement important interaction feedback and meaningful transitions;
-- avoid fake phone chrome unless the user wants a presentation mockup.
+- use a mobile viewport, responsive bounds, semantic HTML, and shared CSS tokens;
+- make screens reachable through the actual journey; an optional screen/state switcher is a review aid, not a substitute for navigation;
+- make enabled controls perform their advertised actions: search filters data, save updates state, and settings affect behavior; local state is sufficient for a prototype;
+- include meaningful pending, success, and recovery feedback where applicable; preserve user input on failure;
+- keep scrolling content and primary actions reachable, including when input or overlays are active;
+- avoid fake phone chrome unless requested for presentation.
 
-For native code, reuse the project's existing navigation, component system, and asset conventions. Match the target platform before adding decorative polish.
+For native work, use the project's navigation, components, assets, and supported SDKs. Add dependencies only when justified by the task. For mobile campaign pages, hero artwork, brand illustrations, empty-state artwork, or distinctive feature icons, use GPT-generated raster assets when they materially support the design. Read [raster-assets.md](references/raster-assets.md) before generation. Follow the user’s preference for bitmap artwork: do not substitute SVG, CSS drawings, or vector-looking placeholders for requested generated visuals. Simple utility UI does not require generated artwork.
 
-Use generated imagery only when imagery is part of the requested design. The design must remain understandable with placeholders or local assets, so image generation is optional rather than a dependency.
+## 6. Verify and deliver
 
-### 6. Inspect and iterate
+Validate against the same design contract used for the representative screen. Do not silently relax thresholds to make the result pass. If requirements or justified design decisions change, update the contract with the reason, preserve explicit user constraints, and repeat affected checks before recording final results.
 
-Render every new or changed key screen. Review the full scrollable content as well as the initial viewport before claiming content is missing or complete.
+Read [quality-gate.md](references/quality-gate.md) before delivery. Inspect every new or changed key screen, including full scrollable content. Exercise the primary journey and relevant recovery paths. Fix task-blocking and major issues introduced by the work before delivery.
 
-Check in this order:
+Match claims to evidence: browser rendering verifies a web prototype, not native gestures, real device keyboards, haptics, or native performance. Report checks as exercised, inspected, or unverified rather than marking a checklist passed by assertion. If rendering is unavailable, deliver the artifact with the exact validation gap; do not claim visual verification.
 
-1. Can the user identify the next action immediately?
-2. Does the main journey complete without a dead end?
-3. Are hierarchy, spacing, alignment, and component states consistent?
-4. Does the design follow the target platform's interaction conventions?
-5. Are contrast, text scaling, touch targets, and motion accessibility acceptable?
-6. Does the result feel specific to this product rather than like a generic template?
+Record applicable checks as Pass, Fail, Unverified, or Not applicable with supporting evidence, using the format in [quality-gate.md](references/quality-gate.md). A checked box alone is not evidence.
 
-Fix high-impact issues before presenting the result. For later user revisions, preserve accepted decisions and change only the requested area plus directly affected components.
+Deliver the artifact path or preview, included screens, concise validation results, and material assumptions or limitations. For research-grounded work, link the sources that actually influenced decisions and explain those lessons briefly. Preserve accepted choices during later revisions and update only requested areas and directly affected components.
 
-## Review Output
+### Automatic layout repair
 
-When the request is a design review, organize findings by severity:
+For generated or changed UI, run applicable browser or native-runtime checks; static code inspection alone does not establish layout correctness. Measure fixed navigation, end-of-scroll clearance, touch regions, text clipping, and horizontal overflow separately. For HTML, capture narrow, standard, and enlarged-text states as defined in the layout reference.
 
-- P0: blocks task completion or creates serious misunderstanding;
-- P1: major usability, hierarchy, accessibility, or platform-convention issue;
-- P2: visible consistency or craft issue;
-- P3: optional refinement.
+Correct observed failures within scope and repeat affected checks until they pass or a concrete environment limitation prevents verification. Diagnose the cause before changing styles: do not hide overflow, shrink readable text, or impose fixed row heights merely to satisfy a metric. When the same correction fails twice, inspect the layout constraints and change approach rather than adding more CSS overrides. Preserve accepted styling and report unresolved evidence gaps explicitly.
 
-For each finding, identify the screen or component, explain the user impact, and give a concrete correction. Prefer annotated visuals when the available tools make them practical.
+## Review findings
 
-## Completion Standard
-
-A generation task is complete only when the requested key screens exist as a visible artifact, the core path works at prototype level, and the result has been visually checked. Report the output location, included screens, important assumptions, and any limitation that changes what the user can evaluate.
-
-For reference-grounded work, also report the sources consulted and the specific design lessons transferred. If public reference retrieval is unavailable or yields nothing relevant, continue from platform conventions and the product model; do not block completion or imply that paid access is required.
-
-Do not imply that this workflow uses Sleek, reproduces Sleek's proprietary model, or syncs to the Sleek editor. It is an independent local design workflow.
+Use P0 for blocked task completion or serious misunderstanding, P1 for major usability/accessibility/platform issues, P2 for visible consistency or craft defects, and P3 for optional refinement. For each finding give location, evidence, user impact, and a concrete correction. Distinguish observed defects from hypotheses requiring interaction. Annotate visuals when practical; do not assign unsupported numerical quality scores.

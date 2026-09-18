@@ -1,11 +1,11 @@
 # UI App Skill
 
-一个面向 Codex 和其他兼容 Agent 的移动端 UI 设计 Skill。它会先研究真实上线 App 的公开界面，再把观察到的产品规律转化为原创、可实现的 iOS / Android 设计与交互原型。
+一个面向 Codex 和其他兼容 Agent 的移动端 UI 设计 Skill。它会根据新设计、局部修改、参考转译或评审选择合适流程，将真实产品参考与平台规范转化为原创、可交互、可验证的 iOS / Android 设计。
 
 ## 能做什么
 
-- 在设计前研究 3–5 个真实产品参考
-- 优先检索 UI Notes 的国内移动端案例，并用其他公开来源补充
+- 新设计按需研究真实产品参考；局部修改优先沿用已有设计
+- 用户素材优先；国内案例可从 UI Notes 等公开来源补充
 - 输出参考证据矩阵，明确采用、调整和拒绝的设计模式
 - 规划核心用户流程、页面和必要状态
 - 生成可交互 HTML、React Native、SwiftUI 或 Flutter 页面
@@ -37,11 +37,11 @@ git clone https://github.com/benzhouwufannao/ui-app-skill.git ~/.codex/skills/ui
 ## 工作流程
 
 1. 明确用户、核心任务、成功时刻和平台。
-2. 围绕具体交互问题研究真实 App 页面。
+2. 按任务需要围绕具体交互问题研究真实 App 页面。
 3. 总结信息层级、主要操作、导航、状态和信任设计。
-4. 建立原创设计方向和设计系统。
+4. 将视觉方向落实为具体规则，先验证代表性页面，再扩展共享组件。
 5. 生成可见、可运行的页面或代码。
-6. 完成视觉、交互、平台规范和无障碍检查。
+6. 操作核心流程并检查布局，区分实际验证、静态检查与未验证项。
 
 ## 免费与第三方来源
 
@@ -56,6 +56,12 @@ ui-app-skill/
 ├── SKILL.md
 ├── agents/openai.yaml
 ├── references/platform-checklist.md
+├── references/platform-ios.md
+├── references/platform-android.md
+├── references/visual-craft.md
+├── references/quality-gate.md
+├── references/mobile-html-layout.md
+├── references/raster-assets.md
 ├── references/reference-research.md
 └── examples/example-prompts.md
 ```

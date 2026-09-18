@@ -15,7 +15,7 @@ Avoid broad searches such as `beautiful app UI`; they produce decorative similar
 
 ## Sources
 
-Prefer sources that expose enough context to understand the screen:
+Start with the user’s supplied references and the project’s established design system. When additional research is useful, prefer sources that expose enough context to understand the screen:
 
 1. UI Notes public App and screenshot pages for Chinese-market mobile products, especially when local language, content density, operations, membership, or domestic product conventions matter.
 2. Public UIZZE catalogue pages for real iOS and web surfaces.
@@ -69,3 +69,9 @@ The result should combine lessons from multiple references and the product brief
 In the final delivery, name the consulted sources and explain the few design decisions they materially influenced. Do not claim that a reference was used if it was not actually inspected. Distinguish observed evidence from design inference.
 
 If browsing is unavailable, use user-provided material or platform conventions and proceed. Record the limitation only when it changes what the user can evaluate.
+
+## Evidence quality
+
+Classify source evidence as an inspected screen, an observed interactive flow, or a text-only description. Static screenshots support composition and visual hierarchy findings, not claims about back behavior, transitions, persistence, or error recovery. Do not treat search snippets as inspected UI. Record access date and apparent platform/version when they affect the conclusion; flag unknown versions rather than inventing them.
+
+Reference libraries support discovery, while official platform documentation supports normative and version-sensitive guidance. Check the latter before prescribing current APIs or system behavior. User references need not be replaced with new searches merely to reach a sample count.

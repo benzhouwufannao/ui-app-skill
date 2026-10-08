@@ -1,6 +1,6 @@
 # Mobile HTML Layout and Repair
 
-Read for mobile HTML prototypes, not native framework implementations. Apply the user's explicit dimensions and project design system first. The examples below are defaults for a narrow phone prototype, not a universal visual style.
+Read for standalone mobile HTML prototypes, not native implementations or host-embedded conversation fragments. For inline previews, follow the host's embedding contract and preserve applicable usability checks without imposing full-viewport height or fixed navigation on the conversation frame. Apply the user's explicit dimensions and project design system first. The examples below are defaults for a narrow phone prototype, not a universal visual style.
 
 ## Layout contract
 

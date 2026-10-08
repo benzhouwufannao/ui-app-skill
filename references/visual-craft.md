@@ -12,7 +12,11 @@ Decide what the first viewport must communicate and which action should dominate
 
 Record actual values for semantic colors, a compact text hierarchy, spacing steps, and component geometry in the deliverable. Adapt values to the selected platform and content; avoid universal font sizes or radii. Typography should distinguish content roles, not merely introduce variety. Use Chinese-capable font fallbacks and inspect mixed Chinese/Latin text, numerals, punctuation, and multiline labels.
 
-Use product-specific content, photography, diagrams, or typography to create identity. Keep familiar interactions discoverable. Choose imagery by subject, crop, and aspect ratio; generic decoration must not displace useful information. Use a coherent icon family with comparable weight and alignment. Do not substitute emoji for production controls unless that is an explicit design choice.
+Use product-specific content, photography, diagrams, or typography to create identity. Keep familiar interactions discoverable. Choose imagery by subject, crop, and aspect ratio; generic decoration must not displace useful information. Do not substitute emoji for production controls unless that is an explicit design choice.
+
+Treat iconography as two related layers. Utility icons need fast recognition and should come from one coherent family with comparable weight, optical size, joins, and alignment. Brand-bearing category or feature icons may be more expressive, but the set still needs a repeatable grammar: shared silhouette construction, corner style, depth/material treatment, palette logic, and consistent subject scale. Give each icon one domain cue that survives at actual size. A generic outline glyph placed in the same rounded square does not become distinctive through color alone. Selected states should change more than the container fill when necessary—such as foreground contrast, depth, or a small motif—without changing the icon's meaning.
+
+Before accepting a prominent new icon set, compare it at actual size and use grayscale or hidden labels when useful to diagnose recognition. Each icon should remain distinguishable from its peers, the set should read as one family, and utility symbols should be familiar. Preserve approved assets. When newly authored brand-bearing category or feature icons need an illustrative identity, prefer a coordinated ImageGen raster set if generation is available; do not infer that need for every feature list. Generate from one shared art direction, then check crop, edges, object scale, and consistency. Existing vector families, explicit vector deliverables, and dynamic recoloring/system-symbol needs remain valid reasons to use vectors.
 
 ## Practical correction examples
 
@@ -26,6 +30,16 @@ Use product-specific content, photography, diagrams, or typography to create ide
 | Only short English placeholder text looks correct | Real Chinese names or long labels break layout | Use realistic content and define wrapping, truncation, and expansion deliberately |
 
 These are contextual examples, not bans on cards, color, or large headers. Explain the product reason for a choice instead of following a trend mechanically.
+
+## Mobile composition and interaction affordance
+
+Top-level tabs represent stable destinations; segmented controls switch related views inside one task. A filter sheet is useful when choices need more space, while a short common choice may stay visible. Pick from task frequency, choice count, and available width rather than copying desktop controls into a phone frame.
+
+Give dense content a scan path: align comparable values, establish grouping, and reveal secondary actions where they are needed. Keep key actions reachable by touch; do not expose required actions only on hover, hidden swipes, or tiny chart marks. If a gesture accelerates a task, supply a discoverable alternate action where appropriate.
+
+Use surface depth to communicate hierarchy. Glass, blur, oversized typography, and expressive illustrations are optional treatments, not indicators of current platform compliance. Check readability over the actual content and respect existing branding. Platform version alone is not a reason to redesign the app.
+
+Treat motion as interaction feedback: relate source and destination, show a state change, and handle interruption. Prefer the existing platform/component behavior to arbitrary per-control effects. Preserve reduced-motion behavior and avoid replaying screen entrances when only a filter or counter changes.
 
 ## Representative-screen check
 

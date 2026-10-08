@@ -2,6 +2,8 @@
 
 Read before delivering new or changed screens. Select checks proportional to the requested artifact; do not build unrelated states merely to complete this table.
 
+For design-only documents, inspect the specified journey, component states, and any requested prototype connections. Do not require executable saves or data processing unless an interactive implementation is in scope. Mark design inspection separately from exercised runtime behavior.
+
 | Check | Evidence to collect |
 |---|---|
 | Primary journey | Perform the sequence from entry to meaningful result; verify back/cancel destinations |
@@ -10,16 +12,20 @@ Read before delivering new or changed screens. Select checks proportional to the
 | Content and layout | Inspect initial viewport and all scrollable content; check narrow width, long Chinese/mixed text, missing images when relevant, and text growth |
 | Input and overlays | Focus fields and open/dismiss relevant sheets; required controls remain reachable; native keyboard claims require native evidence |
 | Consistency | Compare key screen captures and repeated components; check token and semantic action consistency |
+| Visual finish | Inspect at actual size; for substantial visual work, use grayscale/blur when useful to diagnose hierarchy. Verify first-view focus, domain credibility, imagery, icon coherence, and product-specific identity |
+| Editable document health | Verify responsive layout, semantic variables/styles, reusable components, variants, layer names, and final exported frames in the selected editor |
 | Accessibility | Inspect names, focus order, touch regions, contrast, non-color status cues, and reduced motion where applicable |
 | Runtime | Run existing relevant build/type checks for code changes; verify assets and primary screens load |
+| Linked state and data | Confirm filters, selection, totals, and dependent views share the stated scope; editing an entity updates related screens without stale copies |
+| Developer handoff, when requested | Verify entry point, real component-library usage, fixture/API boundaries, assets, and remaining host dependencies; distinguish prototype from integrated code |
 
 ## Layout and interaction evidence
 
-For mobile HTML, execute [mobile-html-layout.md](mobile-html-layout.md). Record viewport width/height, actual text scale, navigation height and positioning, end-of-scroll clearance, horizontal overflow, and any project-specific hero/row limits. Inspect screenshots for text clipping and overlap independently of DOM overflow measurements. Save final-state screenshots after corrections, not just the initial failed captures.
+For standalone mobile HTML, execute [mobile-html-layout.md](mobile-html-layout.md). For an inline prototype, use the host's embedding rules and measure within the rendered product surface; do not impose viewport-fixed navigation or full-page height on a content-sized conversation frame. Record relevant viewport/container dimensions, actual text scale, navigation position, end-of-scroll clearance, horizontal overflow, and project-specific limits. Inspect screenshots for clipping and overlap independently of DOM overflow measurements. Save final-state evidence after corrections.
 
 Exercise relevant dialogs with close/Escape and focus return. Check buttons and form fields in enlarged text, not only page headings. Browser focus tests do not prove real mobile keyboard avoidance; report that separately if no device or suitable emulator was used.
 
-Where implemented, verify search and its empty state, category selection and `aria-pressed`, favorite persistence after reload, both sort directions, invalid-name recovery, saved-item placement, accepted/rejected import types, and editable/exported text. Check console errors and unhandled exceptions. Inspect network requests if the project promises no external assets. Do not add these features solely to satisfy this checklist.
+Select behavior checks from the actual journey: for example, search changes results, saving updates the related list, and a selected filter affects its count. Check persistence across reload only when promised, and exercise relevant validation/recovery. Use [interaction-model.md](interaction-model.md) for linked state. Check console errors and unhandled exceptions; inspect network requests if the project promises no external assets. Do not add features solely to satisfy this checklist.
 
 After a fix, repeat affected checks; broaden only when shared components or new failures justify it. Do not use a visually similar screenshot as proof that storage, download, or validation behavior works.
 

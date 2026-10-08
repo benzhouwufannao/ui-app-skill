@@ -1,4 +1,4 @@
 interface:
   display_name: "UI App Skill"
-  short_description: "结合真实 App 参考与平台规范，设计、迭代并验证原创手机端页面"
-  default_prompt: "使用 $ui-app-skill 根据我的需求和现有素材选择合适流程，设计或优化原创手机端页面，并验证关键交互与视觉表现。"
+  short_description: "设计与优化手机 App，支持 Figma、对话内原型和工程交付，验证视觉与交互"
+  default_prompt: "使用 $ui-app-skill 根据我的需求设计或优化手机 App，沿用现有设计系统，按指定形式交付并验证关键交互；未指定工具的可编辑设计稿优先使用 Figma。"

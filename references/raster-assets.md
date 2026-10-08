@@ -4,9 +4,17 @@ Read when a mobile page needs campaign key art, hero imagery, or brand illustrat
 
 ## Decide what needs generation
 
-Use original raster artwork when it gives the product a meaningful visual identity, explains a function, or supports the campaign theme. Do not add decoration that displaces the primary task. For ordinary empty states, standard feature icons, and controls such as back, search, or close, prefer existing icons or simple graphics. Do not generate these independently merely because an icon or illustration could fit there. A branded-asset decision should name the visual purpose and placement; generic labels such as “distinctive” do not establish a need. If the user explicitly requests bitmap controls throughout, honor that scope while preserving recognizable silhouettes and accessibility.
+Use original raster artwork when it gives the product a meaningful visual identity, explains a function, or supports the campaign theme. Do not add decoration that displaces the primary task. Preserve approved assets. When brand-bearing category, feature, membership, reward, or service icons need a newly authored illustrative identity, prefer a coordinated ImageGen raster set if generation is available. Generate the set together or from one locked style brief rather than prompting each icon independently. Standard controls such as back, search, close, share, and overflow should normally remain familiar library icons unless requested otherwise. A branded-asset decision should name the visual purpose and placement; generic labels such as “distinctive” do not establish a need, and an ordinary feature list does not require new artwork. If the user explicitly requests bitmap controls throughout, honor that scope while preserving recognizable silhouettes and accessibility.
 
-For generated visual assets, deliver PNG or WebP as appropriate. Do not replace requested artwork with SVG, CSS illustrations, or rasterized vector placeholders. Bitmap format alone does not determine style: choose photographic, tactile, painted, dimensional, or another art direction from the brief rather than automatically producing flat vector-style illustrations. Preserve an explicitly requested style.
+For generated visual assets, deliver PNG or WebP as appropriate. Do not replace requested artwork with SVG, CSS illustrations, or rasterized vector placeholders. Bitmap format alone does not determine style. Preserve an explicitly requested style.
+
+For a main visual, Banner, tile section, campaign card, or other prominent merchandising image, do not choose illustration or photorealism by habit. First inspect relevant UI Notes examples by product category and component—especially its Banner, tile-area, home, mall, campaign, card, and header-image collections when applicable. Then decide:
+
+- use photography or a realistic product render when material, fit, food quality, destination, person, or the physical product itself must be trusted or compared;
+- use illustration when the message is conceptual, seasonal, service-led, playful, or would gain more identity than truth from a photograph;
+- use a mixed treatment when a real product cutout needs an illustrated environment, graphic typography, or campaign device.
+
+Record the observed reference pattern and the product reason for the selected medium. Do not infer a universal “mainstream” from one screenshot. When generating illustration, state material, depth, lighting, and detail density so it forms a coherent art direction rather than a generic cartoon look. When generating realism, specify believable subject details and avoid glossy stock-photo cues that conflict with the product position.
 
 ## Tool and model choice
 

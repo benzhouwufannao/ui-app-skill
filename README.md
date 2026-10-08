@@ -8,7 +8,9 @@
 - 用户素材优先；国内案例可从 UI Notes 等公开来源补充
 - 输出参考证据矩阵，明确采用、调整和拒绝的设计模式
 - 规划核心用户流程、页面和必要状态
-- 生成可交互 HTML、React Native、SwiftUI 或 Flutter 页面
+- 根据交付目标生成 Figma 等可编辑设计稿、对话内交互原型、独立 HTML 或 React Native、SwiftUI、Flutter 工程代码
+- 明确跨页面状态、筛选联动、数据口径与保存失败后的恢复行为
+- 原型交接时区分视觉仿制与真实组件库，检查宿主依赖和模拟数据边界
 - 检查平台规范、触控尺寸、安全区、动态文字和无障碍
 - 对已有截图、原型或作品集进行分级设计走查
 
@@ -49,11 +51,14 @@ git clone https://github.com/benzhouwufannao/ui-app-skill.git ~/.codex/skills/ui
 5. 生成可见、可运行的页面或代码。
 6. 操作核心流程并检查布局，区分实际验证、静态检查与未验证项。
 
+交付形式优先遵循用户要求和已有项目。未指定工具的可编辑设计稿优先 Figma；明确要求对话内预览时使用宿主可用的内联能力；明确要求工程代码时继续在目标技术栈中实现。局部修改只加载相关指南、检查受影响范围。
+
 ## 执行环境
 
 - 页面生成需要工作区文件写入能力；视觉与交互验收需要浏览器或对应原生运行环境。环境不足时明确标记未验证项。
 - GPT 位图生成为按需能力，需要当前环境提供相应生图工具；普通空状态和标准图标优先复用，不强制生图。
 - 原生实现沿用现有工程与技术栈，环境支持时执行构建；不以孤立片段替代完整实现。
+- 对话内预览依赖当前宿主提供的展示能力；导出独立代码时需要处理宿主提供的图标、样式和状态存储等依赖。
 
 ## 免费与第三方来源
 
@@ -75,8 +80,15 @@ ui-app-skill/
 ├── references/mobile-html-layout.md
 ├── references/raster-assets.md
 ├── references/reference-research.md
+├── references/interaction-model.md
+├── references/implementation-handoff.md
+├── references/design-editor-delivery.md
+├── references/figma-delivery.md
+├── references/penpot-delivery.md
 └── examples/example-prompts.md
 ```
+
+本次工作流参考了 UI UX Pro Max、UIZZE、SwiftUI Expert 与 Expo 的公开技能，按本 Skill 的平台范围取舍，未引入强制安装依赖。具体来源与取舍见 [implementation-handoff.md](references/implementation-handoff.md#reference-decisions-behind-this-skill)。
 
 ## License
 

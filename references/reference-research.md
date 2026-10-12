@@ -28,7 +28,7 @@ Use authenticated or paid catalogues only when they are already available. Do no
 
 Use `https://uinotes.com/` as the default first discovery source for mobile App design. Its public site currently provides separate App and screenshot libraries, search, company filters, and industry filters. Start with the closest industry and user task, then inspect the relevant App pages and publicly visible screenshots. Free access is enough for ordinary reference sampling; do not recommend or initiate a membership purchase as part of a design task.
 
-Prioritize relevant UI Notes examples without imposing a source quota. Stop when the design question has sufficient evidence; do not collect extra screens merely to reach a count. A direct reference supplied by the user takes precedence, and official platform documentation remains authoritative for current system behavior and APIs.
+Prioritize relevant UI Notes examples without imposing a source quota. Meet the minimum applicable visual-evidence requirement in SKILL.md §2, then stop when the design question has sufficient evidence. A direct reference supplied by the user takes precedence, and official platform documentation remains authoritative for current system behavior and APIs.
 
 Some screenshot search, filtering, and App-detail content may be limited for ordinary users. If a needed screen is locked, use the visible evidence and continue with another public source. A membership or trial may be used when the user already has it and has chosen to use it, but the workflow must remain functional without it.
 
@@ -36,7 +36,7 @@ UI Notes is a reference library, not a generation engine or guaranteed API. Do n
 
 ## Sampling
 
-Use a bounded, diverse sample. For a broad new direction, three to five useful references may be enough; one exact reference can suffice for a narrow question. Prefer different products when comparing patterns, and inspect a sequence from the same product when studying a flow. Stop when additional examples repeat the same lesson.
+Use a bounded, diverse sample. For a broad new direction, three to five useful references may be enough; one inspected supplied or existing screen can suffice for a targeted change or reference translation. A new screen or substantial redesign requires at least two inspected real screens as specified in SKILL.md §2. Prefer different products when comparing patterns, and inspect a sequence from the same product when studying a flow. Stop when additional examples repeat the same lesson.
 
 A search-result title, snippet, generated caption, or text-only description is discovery evidence, not an inspected screen. Do not claim visual research from it. Open the source image or page and inspect the actual screen at a useful size before recording composition, hierarchy, crop, typography, or visual-style findings.
 
@@ -73,7 +73,7 @@ The result should combine lessons from multiple references and the product brief
 
 In the final delivery, name the consulted sources and explain the few design decisions they materially influenced. Do not claim that a reference was used if it was not actually inspected. Distinguish observed evidence from design inference.
 
-If browsing is unavailable, use user-provided material or platform conventions and proceed. Record the limitation only when it changes what the user can evaluate.
+If browsing is unavailable, inspect user-provided visual references or relevant existing project screens. Platform conventions alone do not satisfy the mandatory reference-first gate in SKILL.md §2. If no valid visual evidence is available after feasible alternatives, report the exact gap and complete independent brief/structure work; do not begin visual authoring unless the user explicitly requests skipping research.
 
 ## Evidence quality
 

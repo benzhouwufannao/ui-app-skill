@@ -47,11 +47,17 @@ Resolve ordinary gaps with conservative, reversible defaults and record material
 
 Read [interaction-model.md](references/interaction-model.md) when screens share data, filters affect other views, forms save, or operations run asynchronously. Define state ownership and visible effects before implementing handlers. Include loading, empty, error, permission, offline, or destructive states only where relevant. Keep demo operations distinguishable from live integrations.
 
-## 2. Research decisions that need evidence
+## 2. Mandatory reference-first gate
 
-For a new design or unfamiliar interaction, inspect a bounded set of real product screens. Skip new retrieval when supplied evidence or existing conventions answer the question. Research by task, platform, and state, not by generic beauty adjectives.
+Before generating or modifying any UI design artifact—including a single screen, raster mockup, editable document, prototype, or implementation—inspect relevant real reference screens and record how they inform the design. This is a prerequisite, not an optional enhancement. Do not call an image-generation tool or start visual authoring before this gate is satisfied. Review-only work may inspect the supplied target without searching for external examples.
 
-Read [reference-research.md](references/reference-research.md) when researching. Preserve UI Notes as the preferred public mobile reference source when relevant; use other sources to cover missing cases. An inspected screen supports visual conclusions; interactive behavior needs a flow or runtime observation. Do not copy branding or a recognizably identical composition. If retrieval fails, continue from supplied evidence and platform conventions and report material limits.
+Read [reference-research.md](references/reference-research.md). Start with supplied references or relevant existing project screens; otherwise prioritize UI Notes for mobile cases. Existing conventions, general design knowledge, search summaries, and textual descriptions alone do not satisfy the gate. Previously inspected relevant references may be reused within the same task; do not repeat research for minor iterations.
+
+For a new screen or substantial redesign, inspect at least two relevant real screens, preferably from different products. For a targeted change or explicit reference translation, one supplied or existing screen is sufficient when it directly covers the decision. Inspect the actual screenshot or rendered page at a readable size; merely opening a text-only page is insufficient. Research by product task, platform, and state, not generic aesthetic adjectives. Do not copy branding or a recognizably identical composition.
+
+Before authoring, retain a compact reference record: product and screen name, source URL or local image path, what was actually inspected, useful structural/visual decisions, limitations, and what to adopt or adapt. Share a concise user-facing update naming the inspected cases and the decisions they inform. Use those decisions in the design brief or image-generation prompt; a link list unrelated to the output is insufficient.
+
+If UI Notes is locked or unavailable, continue with accessible official product screenshots, public reference libraries, supplied assets, or relevant project screens. Do not bypass access controls or require a subscription. If no valid visual reference can be inspected after feasible alternatives, complete independent brief/structure work and explain the exact gap; request only the missing reference or access needed. Do not silently generate an unreferenced concept. A current explicit user instruction to skip research overrides this gate; disclose that exception.
 
 ## 3. Make concrete visual decisions
 
@@ -70,6 +76,16 @@ Applicable acceptance criteria / simulation and integration boundaries:
 Do not leave placeholders unresolved or generate a separate specification for every minor edit. Prefer existing design tokens and components. New work should have a small coherent system, not an oversized catalog. Map recurring visual roles to actual tokens and component properties; a styled imitation is not proof that a named component library is used.
 
 Build identity through content, hierarchy, typography, assets, and purposeful detail. Do not default to a hero, KPI row, rounded-card grid, or glass effect on every mobile screen. These treatments remain valid when the task supports them. Brand consistency should coexist with platform-appropriate controls and navigation.
+
+## Reduce template bias and preserve iteration decisions
+
+Separate verified product facts, working assumptions, and unknowns before composition. The skill supplies methods; project documents supply business facts. Use the task, real content, and existing design system to choose hierarchy and layout. Do not treat a preset aesthetic or an unrelated skill’s defaults as the product brief.
+
+Record which reference contributes density, hierarchy, navigation, imagery, or interaction, and which features should not transfer. Preserve supplied brand assets and accepted decisions. If direction is genuinely open, compare meaningful alternatives internally; show multiple directions only when requested or when the choice materially needs user input. Do not make exploration an approval gate for routine work.
+
+For feedback such as “too templated,” “more premium,” or “more polished,” first inspect the artifact and translate the feedback into specific problems: equal visual weights, generic content, repetitive grouping, weak typography, unsuitable density, or irrelevant decoration. Apply the smallest coherent correction while preserving accepted structure, palette, and typography unless they cause the problem. Do not answer vague feedback by automatically adding gradients, glass, shadows, or illustrations. Small edits need no separate report or repeat reference search.
+
+Read the correction and diagnosis guidance in [visual-craft.md](references/visual-craft.md#diagnose-template-bias-and-iterate) when template bias persists. Retain useful decisions in existing project notes or the artifact so later stages use the current design rather than reconstructing it from chat. New business claims and outcomes require evidence.
 
 ## 4. Validate one screen before expanding
 
@@ -101,7 +117,7 @@ Fix introduced blocking and major defects, then rerun affected checks. Diagnose 
 
 Keep evidence proportional: record the criterion, configuration, result, and evidence or exact gap. Distinguish **exercised**, **inspected**, and **unverified**. A screenshot cannot prove storage, gestures, or successful API writes. Environment limits are reported as limits, not passes.
 
-Deliver the artifact or inline preview, included scope, concise validation evidence, and material assumptions. Link research that actually influenced decisions. When code handoff was requested, identify what runs independently, which components are real library components, and what data/runtime work remains; do not claim production readiness from a working mockup. Preserve accepted choices in later revisions.
+Deliver the artifact or inline preview, included scope, concise validation evidence, and material assumptions. Name and link the inspected reference cases (or local image paths), with a brief explanation of what each contributed. Do not claim search-only sources as visual references. When code handoff was requested, identify what runs independently, which components are real library components, and what data/runtime work remains; do not claim production readiness from a working mockup. Preserve accepted choices in later revisions.
 
 ## Review findings
 

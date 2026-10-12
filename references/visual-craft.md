@@ -58,3 +58,23 @@ For authored HTML/CSS, define color values centrally in CSS custom properties. C
 Use roles such as `--surface`, `--surface-nav`, `--ink`, `--text-secondary`, `--action-primary`, `--border`, and applicable status colors. Name by role rather than an incidental color. Derive a suitable navigation surface and separator from the project's palette; do not impose the paper prototype's colors on other apps. Provide an opaque fallback when blur is unavailable. Tokenization does not prove contrast or visual distinction: inspect the resolved colors in each supported appearance.
 
 For native implementations, use the existing theme or semantic color mechanism instead of prescribing CSS variables. Preserve user-specified branding and avoid unrelated token migrations during a local edit.
+
+## Diagnose template bias and iterate
+
+Inspect the actual result before choosing the remedy:
+
+| Observed pattern | Likely issue to investigate | Focused correction |
+|---|---|---|
+| Different products receive the same hero, card grid, and geometry | Preset composition overrides content | Rebuild grouping around the primary task and real content; preserve useful tokens |
+| Attractive screens omit business rules or important states | Missing project facts | Load the relevant rules and map their visible effects before styling |
+| References are supplied but the output remains generic | References have no explicit transferable decisions | State which source informs hierarchy, density, navigation, or asset treatment and adapt to this product |
+| Revisions keep changing colors, fonts, and structure | Accepted choices are not retained | Record the current direction and change only the dimensions implicated by feedback |
+| Structure works but looks unfinished | Local craft defects | Fix alignment, type roles, spacing, crop, and component consistency at actual size |
+
+These are hypotheses to investigate, not automatic diagnoses. Conventional layouts may be the best answer for familiar mobile tasks. Product specificity comes from appropriate content, priorities, behavior, and assets; novelty or asymmetry alone is not success.
+
+For substantial work, establish a short checkable direction: primary task, first-view focus, relevant brand constraints, reference lessons, and the design choices currently fixed. Distinguish facts from assumptions. Do not require a new document for minor edits.
+
+Each iteration should target an observable issue and then inspect the changed result. Explain why the correction helps the task when the reason is material. Avoid broad restyling when a local fix suffices; a shared-token correction may legitimately affect several screens. Do not introduce decoration solely to make the result appear less generic.
+
+When the same failure recurs across different tasks, investigate input quality, reference interpretation, skill defaults, and verification separately. If the source remains unclear, compare one representative task with the current skill, with clarified context, and without the suspected default. Such comparison is optional diagnosis, not a requirement for normal delivery. Change the skill only when evidence supports a reusable correction; keep project facts in project documents and avoid turning one aesthetic preference into a universal ban.

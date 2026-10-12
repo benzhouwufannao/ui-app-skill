@@ -6,12 +6,14 @@ For design-only documents, inspect the specified journey, component states, and 
 
 | Check | Evidence to collect |
 |---|---|
+| Reference-first evidence | Before visual authoring, verify the applicable inspected-screen minimum, source links/paths, adopt/adapt decisions, and their use in the brief or generation prompt; search summaries do not qualify. Any explicit user override must be recorded |
 | Primary journey | Perform the sequence from entry to meaningful result; verify back/cancel destinations |
 | Enabled controls | Search changes results, save updates state, selections persist for the intended journey; no empty handlers disguised as working controls |
 | Relevant async states | Distinguish loading, empty, and failure; exercise one applicable failure and recovery, preserving input |
 | Content and layout | Inspect initial viewport and all scrollable content; check narrow width, long Chinese/mixed text, missing images when relevant, and text growth |
 | Input and overlays | Focus fields and open/dismiss relevant sheets; required controls remain reachable; native keyboard claims require native evidence |
 | Consistency | Compare key screen captures and repeated components; check token and semantic action consistency |
+| Content-led composition | For substantial visual work, check that grouping and prominence follow the actual task; repeated layouts have a reason, reference lessons appear in the result, and decorative elements do not displace useful content. Preserve familiar patterns where they work |
 | Visual finish | Inspect at actual size; for substantial visual work, use grayscale/blur when useful to diagnose hierarchy. Verify first-view focus, domain credibility, imagery, icon coherence, and product-specific identity |
 | Editable document health | Verify responsive layout, semantic variables/styles, reusable components, variants, layer names, and final exported frames in the selected editor |
 | Accessibility | Inspect names, focus order, touch regions, contrast, non-color status cues, and reduced motion where applicable |

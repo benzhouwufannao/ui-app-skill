@@ -8,6 +8,39 @@ Choose the composition from the task. Transaction histories favor scan-friendly 
 
 Decide what the first viewport must communicate and which action should dominate. Several navigation destinations may coexist, but competing primary actions need a reason. Use visual prominence proportional to task importance.
 
+## Design mobile information, not a compressed report
+
+Choose what the first viewport helps the user understand or do, then place lower-frequency detail behind a visible expansion or detail route when that improves the task. Preserve access to all required content. A dense report can remain a report when comparison across columns is the actual job; decide from the use case rather than treating tables as either forbidden or the default.
+
+For mobile performance, finance, or operational screens:
+
+- Group related measures around the user's question. Show the relevant baseline and its clearly named difference when supplied data supports it.
+- Use rows with a primary label/value and secondary context for scanning. Use columns when users need repeated cross-row comparison and labels remain readable at phone width.
+- Give long lists a meaningful initial summary and a visible route to the rest when suitable. Choose the initial count from content and available space; three is an example, not a rule.
+- Keep the active person, date, and scope clear without letting identity or filter chrome consume the first viewport. Period changes must update the whole scope consistently.
+- Choose navigation and controls from the real mobile journey. Status bars, phone frames, rounded corners, and extra tabs do not establish an App experience.
+- Keep factual figures intact. Where scope, currency, goals, or trends are missing, record the gap rather than inventing reassuring progress or graphs.
+
+Completion: the initial viewport has a clear task and priority; required detail is reachable; comparable values align; long labels and enlarged text remain readable. For screenshot-only work, inspect the visible structure and state the interaction limits.
+
+## Give the product one deliberate visual voice
+
+Translate the audience, use scene, brand, and content into choices rather than an aesthetic adjective. Establish a palette strategy, typographic hierarchy, and one memorable element; let the rest support operation. Identity can come from restrained typography, a characteristic navigation surface, imagery, or a meaningful layout detail. It need not mean a large hero, a dark theme, luxury styling, or a new font download.
+
+Name the actual available typefaces and fallbacks. Decide Chinese, Latin, and numeric roles together; small data labels need readability more than personality. Choose size and weight steps, and aligned tabular numerals where values are compared. Brand-bearing display text may use a different family when the product earns it.
+
+Before building, review the compact plan from SKILL.md against these common defaults:
+
+| If the plan repeats… | Make the decision specific by… |
+|---|---|
+| Equal rounded cards for every label | Grouping by business relationships and choosing rows, sections, or cards for their function |
+| A big number, supporting stats, and a gradient | Establishing why that metric deserves first-view priority and removing accents without meaning |
+| The same cream/serif, black/neon, or blue SaaS palette across products | Deriving color and type from this product's brand and use scene; retaining a pinned palette |
+| Decorative ranks, all-caps labels, or metadata strings | Using labels and markers only for real meaning; keeping business names intact |
+| A stylish header that displaces useful content | Putting the primary task and relevant context back in the first viewport |
+
+These are diagnostic examples, not universal bans. Existing accepted systems and explicit user choices win. The plan is ready when its distinctive decision has a product reason, the surrounding UI remains quiet and readable, and structure fits the mobile task. Share only the decisions that help the user assess the result.
+
 ## Turn direction into tokens
 
 Record actual values for semantic colors, a compact text hierarchy, spacing steps, and component geometry in the deliverable. Adapt values to the selected platform and content; avoid universal font sizes or radii. Typography should distinguish content roles, not merely introduce variety. Use Chinese-capable font fallbacks and inspect mixed Chinese/Latin text, numerals, punctuation, and multiline labels.

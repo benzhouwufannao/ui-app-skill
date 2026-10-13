@@ -14,7 +14,7 @@ Inspect supplied screens, files, and project conventions first. Treat the reques
 | Action | Working path |
 |---|---|
 | New app or substantial redesign | Core journey → focused references → representative screen → shared system → remaining screens |
-| Local revision or polish | Inspect the affected screen and components → targeted change → affected checks; preserve accepted structure |
+| Local revision or polish | Inspect the affected screen and components → targeted change → affected checks; preserve business relationships and accepted design decisions |
 | Reference translation | Inspect supplied images → extract visual rules → original composition → compare |
 | Review only | Evidence → prioritized findings and corrections; do not implement a rebuild |
 | Prototype-to-code handoff | Inspect prototype source and behavior → map to existing components/state/data → implement and verify the requested scope |
@@ -27,6 +27,8 @@ Inspect supplied screens, files, and project conventions first. Treat the reques
 | Standalone web prototype | Runnable HTML or the requested web stack, with reachable screens and local interactions |
 | Native or project implementation | Integrate with the existing framework and component system. A new runnable project is appropriate when requested |
 | Exploration or review | Supply the requested directions, screen map, annotations, or findings; a full app is unnecessary |
+
+Choose the medium by what the user needs to inspect. An existing project or design document establishes the destination. For an unspecified “optimize this page / show me a better version”, deliver an editable screen or an operable preview appropriate to the available environment; preserve any already accepted delivery format. Prefer Figma for editable design documents and HTML/the existing stack for runnable previews. Use a full-screen raster mockup when the user requests an image, visual exploration, or accepts that format; keep labels and controls editable for structured design/handoff work. Generating a picture is not completion of an editable or interactive page request.
 
 A clear output choice needs no reconfirmation. If an output is not specified, infer it from the task and existing artifacts; use the Figma preference for editable design work, not as a reason to override code or inline requests. If a required capability is unavailable, complete independent work, explain the specific limit, and distinguish any fallback from the requested output. Do not silently call HTML a native app or an editable Figma file.
 
@@ -73,6 +75,8 @@ Shared components and variants / relevant state ownership:
 Applicable acceptance criteria / simulation and integration boundaries:
 ```
 
+Before authoring new designs or substantial visual revisions, write a compact visual plan in the existing notes or artifact: 4–6 semantic color values; named typefaces with Chinese/Latin/numeric roles and key sizes; a one-sentence layout concept plus a compact sketch when useful; and one product-specific source of identity. Review this plan against the brief before building: which decisions come from the product, which from inspected references, and which merely repeat a familiar template? Revise the generic choices and retain the final direction. For local polish, apply this check only to the affected choices. This is internal self-review, not a user approval step.
+
 Do not leave placeholders unresolved or generate a separate specification for every minor edit. Prefer existing design tokens and components. New work should have a small coherent system, not an oversized catalog. Map recurring visual roles to actual tokens and component properties; a styled imitation is not proof that a named component library is used.
 
 Build identity through content, hierarchy, typography, assets, and purposeful detail. Do not default to a hero, KPI row, rounded-card grid, or glass effect on every mobile screen. These treatments remain valid when the task supports them. Brand consistency should coexist with platform-appropriate controls and navigation.
@@ -81,7 +85,7 @@ Build identity through content, hierarchy, typography, assets, and purposeful de
 
 Separate verified product facts, working assumptions, and unknowns before composition. The skill supplies methods; project documents supply business facts. Use the task, real content, and existing design system to choose hierarchy and layout. Do not treat a preset aesthetic or an unrelated skill’s defaults as the product brief.
 
-Record which reference contributes density, hierarchy, navigation, imagery, or interaction, and which features should not transfer. Preserve supplied brand assets and accepted decisions. If direction is genuinely open, compare meaningful alternatives internally; show multiple directions only when requested or when the choice materially needs user input. Do not make exploration an approval gate for routine work.
+Record which reference contributes density, hierarchy, navigation, imagery, or interaction, and which features should not transfer. Preserve supplied brand assets and accepted decisions. Preserve business content, metric definitions, relationships, and access to detail; the original card boundaries, ordering, and table geometry are not binding unless the user or existing design system makes them so. If direction is genuinely open, compare meaningful alternatives internally; show multiple directions only when requested or when the choice materially needs user input. Do not make exploration an approval gate for routine work.
 
 For feedback such as “too templated,” “more premium,” or “more polished,” first inspect the artifact and translate the feedback into specific problems: equal visual weights, generic content, repetitive grouping, weak typography, unsuitable density, or irrelevant decoration. Apply the smallest coherent correction while preserving accepted structure, palette, and typography unless they cause the problem. Do not answer vague feedback by automatically adding gradients, glass, shadows, or illustrations. Small edits need no separate report or repeat reference search.
 

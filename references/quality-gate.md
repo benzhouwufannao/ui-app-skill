@@ -13,6 +13,8 @@ For design-only documents, inspect the specified journey, component states, and 
 | Content and layout | Inspect initial viewport and all scrollable content; check narrow width, long Chinese/mixed text, missing images when relevant, and text growth |
 | Input and overlays | Focus fields and open/dismiss relevant sheets; required controls remain reachable; native keyboard claims require native evidence |
 | Consistency | Compare key screen captures and repeated components; check token and semantic action consistency |
+| Mobile information hierarchy | Inspect the initial viewport at the target phone width: task, active scope and primary result/action are clear; required detail has a discoverable route; identity/filter chrome and density serve the task. Validate expansion/detail routes when interactive; inspect only when static |
+| Visual-plan review | Compare the final screen with the recorded color/type/layout decisions and product-specific source of identity; identify generic drift and fix the affected choices rather than changing the entire style |
 | Content-led composition | For substantial visual work, check that grouping and prominence follow the actual task; repeated layouts have a reason, reference lessons appear in the result, and decorative elements do not displace useful content. Preserve familiar patterns where they work |
 | Visual finish | Inspect at actual size; for substantial visual work, use grayscale/blur when useful to diagnose hierarchy. Verify first-view focus, domain credibility, imagery, icon coherence, and product-specific identity |
 | Editable document health | Verify responsive layout, semantic variables/styles, reusable components, variants, layer names, and final exported frames in the selected editor |

@@ -126,3 +126,11 @@
 ```
 
 验收：沿用用户明确选择的静态格式；局部检查相关视觉决策，保持配色与导航；不强制新品牌、深蓝金色、三项摘要或额外详情页；图中的数值与业务文案完整，准确说明交互未验证。
+
+
+## Eagle-led optimization regression checks
+
+- “参考 Eagle 收藏优化手机业绩页，保留浅蓝渐变和白卡片。” Inspect relevant descendant folders and actual images. Preserve locked identity; identify concrete reading problems and map references to the changed regions. Do not infer blanket approval from collection membership.
+- “只微调间距和对齐，所有内容直接展示。” Keep composition and visibility; improve actual mixed-language content without introducing collapsed detail or a mandatory redesign.
+- “上一版和原图一模一样，要有看得见的提升。” Compare the actual outputs, choose changes for observed problems, and inspect them at the same mobile size. Do not treat a larger structural change as automatically better.
+- “Eagle UI页面文件夹查不到图片。” Inspect child folders and filter semantics before concluding the library is empty; if no match remains, state the evidence gap and use an accessible alternative.

@@ -1,6 +1,6 @@
 ---
 name: ui-app-skill
-description: 设计、优化或评审 iOS/Android 手机 App 界面，交付可编辑设计稿、对话内交互原型或指定技术栈的工程代码。适用于单页、多页面流程、参考图转译和原型开发交接；沿用已有项目与设计系统，未指定工具的可编辑设计稿优先 Figma。普通网站、桌面后台和纯后端任务不使用。
+description: 设计、优化或评审 iOS/Android 手机 App 界面，交付可编辑设计稿、对话内交互原型或指定技术栈的工程代码。适用于单页、多页面流程、参考图转译和原型开发交接；沿用已有项目与设计系统，未指定工具的可编辑设计稿优先 Figma。覆盖 PC 业务页面、报表和看板向移动 Web 的适配；普通营销网站、纯桌面后台和纯后端任务不使用。
 ---
 
 # UI App Design
@@ -49,17 +49,21 @@ Resolve ordinary gaps with conservative, reversible defaults and record material
 
 Read [interaction-model.md](references/interaction-model.md) when screens share data, filters affect other views, forms save, or operations run asynchronously. Define state ownership and visible effects before implementing handlers. Include loading, empty, error, permission, offline, or destructive states only where relevant. Keep demo operations distinguishable from live integrations.
 
-## 2. Mandatory reference-first gate
+## Separate reusable method from project design
 
-Before generating or modifying any UI design artifact—including a single screen, raster mockup, editable document, prototype, or implementation—inspect relevant real reference screens and record how they inform the design. This is a prerequisite, not an optional enhancement. Do not call an image-generation tool or start visual authoring before this gate is satisfied. Review-only work may inspect the supplied target without searching for external examples.
+Keep task-independent decision rules in this skill; keep brand palettes, exact type scales, component geometry, page order, and accepted compositions in the current project's design system or notes. Derive project values from audience, content, platform, brand, and existing constraints. A successful case supplies evidence with a transfer boundary, not a default skin for future products.
 
-Read [reference-research.md](references/reference-research.md). Start with supplied references or relevant existing project screens; otherwise prioritize UI Notes for mobile cases. Existing conventions, general design knowledge, search summaries, and textual descriptions alone do not satisfy the gate. Previously inspected relevant references may be reused within the same task; do not repeat research for minor iterations.
+Before using supplied references, assign their role: business/content source, required visual reproduction, selectively adopted design evidence, or quality/comparison benchmark. Infer the role from the user's request and record it briefly; ask only if ambiguity materially changes the result. For independent design or comparison requests, derive the composition from the task and project system; use benchmark screens to evaluate outcomes rather than prescribe their section order or component arrangement. If already inspected, disclose that fact instead of claiming a blind comparison. Existing project conventions remain valid; originality does not require arbitrary novelty.
 
-For a new screen or substantial redesign, inspect at least two relevant real screens, preferably from different products. For a targeted change or explicit reference translation, one supplied or existing screen is sufficient when it directly covers the decision. Inspect the actual screenshot or rendered page at a readable size; merely opening a text-only page is insufficient. Research by product task, platform, and state, not generic aesthetic adjectives. Do not copy branding or a recognizably identical composition.
+## 2. Inspect references that resolve the design decision
 
-Before authoring, retain a compact reference record: product and screen name, source URL or local image path, what was actually inspected, useful structural/visual decisions, limitations, and what to adopt or adapt. Share a concise user-facing update naming the inspected cases and the decisions they inform. Use those decisions in the design brief or image-generation prompt; a link list unrelated to the output is insufficient.
+Read [reference-research.md](references/reference-research.md). Inspect the supplied screen or current implementation first; it may already provide sufficient visual evidence for a local change. For missing decisions, use relevant Eagle assets when available, then external mobile references. Select by user task, content density, and state rather than by visual category alone. Inspect the actual screen, not just names or search summaries.
 
-If UI Notes is locked or unavailable, continue with accessible official product screenshots, public reference libraries, supplied assets, or relevant project screens. Do not bypass access controls or require a subscription. If no valid visual reference can be inspected after feasible alternatives, complete independent brief/structure work and explain the exact gap; request only the missing reference or access needed. Do not silently generate an unreferenced concept. A current explicit user instruction to skip research overrides this gate; disclose that exception.
+Keep a compact record of what each selected source contributes and its limits. Connect visible evidence to the affected design region and a comparison criterion. A strong supplied reference need not be supplemented to meet a quota; a new design may need different sources for function and visual treatment. Reuse inspected evidence in the same task. If access is unavailable, use feasible alternatives and describe the remaining gap; missing reference libraries alone should not stop authorized work.
+
+## Check implementation feasibility
+
+Assess proposed components, layout, formatting, and interactions against the user's actual target platform. Prefer supported components where appropriate; distinguish native support, custom dependencies, workarounds, and uncertain capabilities. Verify version-sensitive claims in the platform's official documentation. Keep implementation mappings in project notes. Prototype rendering alone does not verify another platform's behavior, and a project-specific platform choice does not become a default for future tasks.
 
 ## 3. Make concrete visual decisions
 
@@ -67,6 +71,7 @@ For new designs or substantial visual changes, read [visual-craft.md](references
 
 ```text
 Product / primary journey / platform / delivery format:
+Reference roles / permitted structural borrowing:
 First-view priority / distinctive product detail:
 Semantic colors / text roles / spacing / component geometry:
 Navigation / content structure / list-vs-card rationale:
@@ -75,21 +80,23 @@ Shared components and variants / relevant state ownership:
 Applicable acceptance criteria / simulation and integration boundaries:
 ```
 
-Before authoring new designs or substantial visual revisions, write a compact visual plan in the existing notes or artifact: 4–6 semantic color values; named typefaces with Chinese/Latin/numeric roles and key sizes; a one-sentence layout concept plus a compact sketch when useful; and one product-specific source of identity. Review this plan against the brief before building: which decisions come from the product, which from inspected references, and which merely repeat a familiar template? Revise the generic choices and retain the final direction. For local polish, apply this check only to the affected choices. This is internal self-review, not a user approval step.
+Before authoring new designs or substantial visual revisions, use the record above as a compact visual plan: actual semantic colors; named typefaces with Chinese/Latin/numeric roles and key sizes; a layout concept with a sketch when useful; and a product-specific source of identity. Review this plan against the brief before building: which decisions come from the product, which from inspected references, and which merely repeat a familiar template? Revise the generic choices and retain the final direction. For local polish, apply this check only to the affected choices. This is internal self-review, not a user approval step.
 
 Do not leave placeholders unresolved or generate a separate specification for every minor edit. Prefer existing design tokens and components. New work should have a small coherent system, not an oversized catalog. Map recurring visual roles to actual tokens and component properties; a styled imitation is not proof that a named component library is used.
 
+For new screens or feedback that the result looks assembled from generic components, compose from content relationships before selecting components. Resolve content hierarchy and composition before choosing tokens and components; reuse those decisions here rather than running a second workflow. “Prefer existing components” means reuse implementation after selecting the appropriate structure, not let the available component catalog determine the page.
+
 Build identity through content, hierarchy, typography, assets, and purposeful detail. Do not default to a hero, KPI row, rounded-card grid, or glass effect on every mobile screen. These treatments remain valid when the task supports them. Brand consistency should coexist with platform-appropriate controls and navigation.
 
-## Reduce template bias and preserve iteration decisions
+## Preserve decisions and learn from feedback
 
-Separate verified product facts, working assumptions, and unknowns before composition. The skill supplies methods; project documents supply business facts. Use the task, real content, and existing design system to choose hierarchy and layout. Do not treat a preset aesthetic or an unrelated skill’s defaults as the product brief.
+For optimization, separate accepted identity from adjustable composition using [reference-research.md § Optimization decisions](references/reference-research.md#optimization-decisions). Translate feedback into named problems and make the smallest coherent correction that meets the requested scope. For a redesign, consider genuinely different arrangements when useful; for local polish, retain working structure. Project facts and user choices outrank reference conventions. Use [visual-craft.md § Diagnose template bias and iterate](references/visual-craft.md#diagnose-template-bias-and-iterate) when the same problem persists.
 
-Record which reference contributes density, hierarchy, navigation, imagery, or interaction, and which features should not transfer. Preserve supplied brand assets and accepted decisions. Preserve business content, metric definitions, relationships, and access to detail; the original card boundaries, ordering, and table geometry are not binding unless the user or existing design system makes them so. If direction is genuinely open, compare meaningful alternatives internally; show multiple directions only when requested or when the choice materially needs user input. Do not make exploration an approval gate for routine work.
+When the user supplies examples, corrects a result, or asks to improve the skill, read [case-learning.md](references/case-learning.md). Accumulate evidence during real work rather than requiring a prepared case library. Distinguish accurate reconstruction, independent design judgment, and implementation quality when diagnosing failure.
 
-For feedback such as “too templated,” “more premium,” or “more polished,” first inspect the artifact and translate the feedback into specific problems: equal visual weights, generic content, repetitive grouping, weak typography, unsuitable density, or irrelevant decoration. Apply the smallest coherent correction while preserving accepted structure, palette, and typography unless they cause the problem. Do not answer vague feedback by automatically adding gradients, glass, shadows, or illustrations. Small edits need no separate report or repeat reference search.
+## Mobile reports and desktop adaptation
 
-Read the correction and diagnosis guidance in [visual-craft.md](references/visual-craft.md#diagnose-template-bias-and-iterate) when template bias persists. Retain useful decisions in existing project notes or the artifact so later stages use the current design rather than reconstructing it from chat. New business claims and outcomes require evidence.
+For PC reports, dashboards, and business pages adapted to phones, read [mobile-reports.md](references/mobile-reports.md) before composing. Preserve business meaning and comparison relationships; validate data fidelity separately from visual quality.
 
 ## 4. Validate one screen before expanding
 
@@ -108,6 +115,8 @@ For design/build requests, create a visible artifact and preview or render it. A
 - **Editable design:** use responsive layout, semantic styles/variables, reusable components and relevant variants. Keep text and controls editable. Export and inspect key frames at intended size. Absolute positioning is appropriate for deliberate artwork or overlays, not every structured row.
 
 For campaign art, prominent merchandising images, or branded illustrations, read [raster-assets.md](references/raster-assets.md). Reuse suitable supplied/project assets first. When a prominent image needs a new medium decision, inspect relevant category examples where available. Decide subject, medium, crop, material, and detail from the product purpose; no universal illustration or photography default. Keep unavailable final assets explicitly provisional.
+
+Choose icon use and placement from the project's design system, functional semantics, and hierarchy. Reuse suitable project assets or user-specified libraries, then a coherent established SVG library. Preserve accepted icons in existing projects. When heading icons are requested or established by the project, implement them in the delivered headings; a benchmark reference alone does not require copying that treatment. Keep sizes, spacing, weight and color consistent with the project's typography, and inspect alignment at actual display size. Preserve SVG vectors and report the actual asset source; do not substitute emoji for functional icons or claim assets were retrieved when they were not.
 
 Keep utility icons familiar and coherent. Brand-bearing category or feature icons may use a coordinated generated raster set when that visual direction is needed; preserve established assets and system-dependent vector behavior. Define a shared visual grammar and verify the set at its actual size. Do not generate decorative assets solely to fill a standard list or settings screen. Follow the available image tool's instructions and report only verifiable tool/model claims.
 

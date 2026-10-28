@@ -13,10 +13,13 @@ For design-only documents, inspect the specified journey, component states, and 
 | Content and layout | Inspect initial viewport and all scrollable content; check narrow width, long Chinese/mixed text, missing images when relevant, and text growth |
 | Input and overlays | Focus fields and open/dismiss relevant sheets; required controls remain reachable; native keyboard claims require native evidence |
 | Consistency | Compare key screen captures and repeated components; check token and semantic action consistency |
+| Reference role and scope | Check structural borrowing against the assigned reference role. Project colors, type scales and page arrangements belong to project notes; a comparison benchmark does not silently become a reproduction target |
+| Actual-size readability | Inspect body data, units, legends and comparisons at the target CSS width without zoom. A no-overflow measurement is separate evidence and cannot establish readable text |
 | Mobile information hierarchy | Inspect the initial viewport at the target phone width: task, active scope and primary result/action are clear; required detail has a discoverable route; identity/filter chrome and density serve the task. Validate expansion/detail routes when interactive; inspect only when static |
 | Visual-plan review | Compare the final screen with the recorded color/type/layout decisions and product-specific source of identity; identify generic drift and fix the affected choices rather than changing the entire style |
 | Content-led composition | For substantial visual work, check that grouping and prominence follow the actual task; repeated layouts have a reason, reference lessons appear in the result, and decorative elements do not displace useful content. Preserve familiar patterns where they work |
 | Visual finish | Inspect at actual size; for substantial visual work, use grayscale/blur when useful to diagnose hierarchy. Verify first-view focus, domain credibility, imagery, icon coherence, and product-specific identity |
+| Composition before components | Verify functional and visual references cover their stated decisions, a clear first-view focus and primary action exist, and grouping follows content rather than a component catalog. For template-bias feedback, apply the composition checks in visual-reference-craft's style-calibration reference; record concrete remaining differences separately from functional results |
 | Editable document health | Verify responsive layout, semantic variables/styles, reusable components, variants, layer names, and final exported frames in the selected editor |
 | Accessibility | Inspect names, focus order, touch regions, contrast, non-color status cues, and reduced motion where applicable |
 | Runtime | Run existing relevant build/type checks for code changes; verify assets and primary screens load |
@@ -40,6 +43,12 @@ After a fix, repeat affected checks; broaden only when shared components or new 
 - **Unverified:** could not run or lacks an appropriate environment; state only material gaps and the precise reason.
 
 For a visual review based on screenshots, distinguish observed defects from behavior that needs verification. For a prototype, explicitly identify simulated external operations rather than calling them live integrations. Local state is sufficient when it demonstrates the intended task.
+
+## Visual improvement evidence
+
+For an optimization, compare the original and final screen at the same CSS viewport width, including both the first viewport and the affected detailed region. Record the visible problem addressed, the observed change, and any tradeoff (e.g. less scrolling versus hidden detail). Inspect readable type, alignment, grouping, and visual weight independently of DOM overflow checks. The result should preserve the agreed identity and improve the named problem; changing colors, adding icons, or merging cards alone does not establish improvement.
+
+Report functional verification separately from visual assessment. State when the change is a design judgment awaiting user evaluation rather than declaring it aesthetically superior. When a major visual problem remains, fix that region and repeat affected checks; a passing interaction test does not close it.
 
 ## Finish criteria
 

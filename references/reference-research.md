@@ -15,7 +15,7 @@ Avoid broad searches such as `beautiful app UI`; they produce decorative similar
 
 ## Sources
 
-Start with the user’s supplied references and the project’s established design system. When additional research is useful, use UI Notes as the primary reference website for mobile App design. Begin with its App library, screenshot library, search, company filters, and industry filters. Build most of the initial sample there when relevant examples are publicly visible, then use other sources only to fill missing flows, platforms, states, or product categories.
+Start with the user’s supplied references and the project’s established design system. For additional evidence, inspect relevant Eagle assets when available using the procedure below. Use UI Notes as the first external mobile reference source for unresolved decisions. External research supplements applicable local evidence.
 
 1. UI Notes public App and screenshot pages, especially for Chinese-market language, content density, operations, membership, commerce, tools, and domestic product conventions.
 2. Official App Store and Google Play listings when current version or platform context is needed.
@@ -26,9 +26,9 @@ Use authenticated or paid catalogues only when they are already available. Do no
 
 ### UI Notes access rule
 
-Use `https://uinotes.com/` as the default first discovery source for mobile App design. Its public site currently provides separate App and screenshot libraries, search, company filters, and industry filters. Start with the closest industry and user task, then inspect the relevant App pages and publicly visible screenshots. Free access is enough for ordinary reference sampling; do not recommend or initiate a membership purchase as part of a design task.
+Use `https://uinotes.com/` as the first external discovery source after relevant supplied/project/Eagle references. Its public site currently provides separate App and screenshot libraries, search, company filters, and industry filters. Start with the closest industry and user task, then inspect the relevant App pages and publicly visible screenshots. Free access is enough for ordinary reference sampling; do not recommend or initiate a membership purchase as part of a design task.
 
-Prioritize relevant UI Notes examples without imposing a source quota. Meet the minimum applicable visual-evidence requirement in SKILL.md §2, then stop when the design question has sufficient evidence. A direct reference supplied by the user takes precedence, and official platform documentation remains authoritative for current system behavior and APIs.
+Prioritize relevant UI Notes examples without imposing a source quota. Follow SKILL.md §2 and stop when the design question has sufficient inspected evidence. A direct reference supplied by the user takes precedence, and official platform documentation remains authoritative for current system behavior and APIs.
 
 Some screenshot search, filtering, and App-detail content may be limited for ordinary users. If a needed screen is locked, use the visible evidence and continue with another public source. A membership or trial may be used when the user already has it and has chosen to use it, but the workflow must remain functional without it.
 
@@ -36,7 +36,7 @@ UI Notes is a reference library, not a generation engine or guaranteed API. Do n
 
 ## Sampling
 
-Use a bounded, diverse sample. For a broad new direction, three to five useful references may be enough; one inspected supplied or existing screen can suffice for a targeted change or reference translation. A new screen or substantial redesign requires at least two inspected real screens as specified in SKILL.md §2. Prefer different products when comparing patterns, and inspect a sequence from the same product when studying a flow. Stop when additional examples repeat the same lesson.
+Use a bounded, diverse sample. One inspected supplied or existing screen can suffice for a targeted change or reference translation. For a broad new direction, sample enough relevant screens to cover the unresolved functional and visual decisions, without a fixed count. Compare different products when useful, and inspect a sequence from the same product when studying a flow. Stop when additional examples repeat the same lesson.
 
 A search-result title, snippet, generated caption, or text-only description is discovery evidence, not an inspected screen. Do not claim visual research from it. Open the source image or page and inspect the actual screen at a useful size before recording composition, hierarchy, crop, typography, or visual-style findings.
 
@@ -80,3 +80,32 @@ If browsing is unavailable, inspect user-provided visual references or relevant 
 Classify source evidence as an inspected screen, an observed interactive flow, or a text-only description. Static screenshots support composition and visual hierarchy findings, not claims about back behavior, transitions, persistence, or error recovery. Do not treat search snippets as inspected UI. Record access date and apparent platform/version when they affect the conclusion; flag unknown versions rather than inventing them.
 
 Reference libraries support discovery, while official platform documentation supports normative and version-sensitive guidance. Check the latter before prescribing current APIs or system behavior. User references need not be replaced with new searches merely to reach a sample count.
+
+
+## Eagle retrieval and transfer
+
+Use the installed Eagle skill for API/CLI operations. If Eagle is unavailable or has no relevant evidence, continue with other sources without blocking or initializing unrelated folders.
+
+- Discover the actual folder hierarchy; inspect relevant descendants rather than treating an empty parent folder as an empty library. Folder names and IDs are local data, not fixed skill constants.
+- Search by task and the unresolved design decision: e.g. sales comparison, category ranking, date filtering. Sample across relevant App, statistics, or component folders rather than defaulting to the newest items. Query folders separately when multi-folder filters use intersection semantics; deduplicate by item ID.
+- Inspect the actual image and read its annotation/comments. Record item ID, source URL or local path, screen/task, transferable feature, and limitation. A saved image is a candidate reference, not proof that the user approves every part of it. Preserve the distinction between explicit user feedback and inferred preference.
+- Separate the product screen from its portfolio presentation: device frames, giant cover text, watermarks, and surrounding decoration do not establish the in-product design.
+- For each selected reference, connect **visible feature → design decision → affected region → verification**. For example: a funnel communicates stage conversion → use that structure only when the target has stage relationships → conversion section → verify stage order and readable labels. Do not invent a funnel, chart, illustration, or data merely to resemble a reference.
+- Keep these observations in the current project’s design notes. Add permanent preference or failure records to the library only when the user requested that write; keep their task context and the user's actual feedback.
+
+Stop sampling when the important decisions have sufficient visual evidence. Folder access and filename lists alone do not satisfy visual inspection.
+
+## Optimization decisions
+
+Before editing an incumbent screen, distinguish:
+
+| Decision | Evidence |
+|---|---|
+| Keep | User-accepted identity and working conventions: palette, material, typography, or density |
+| Improve | A visible problem in a named region and its effect on reading or action |
+| Proposed change | A layout/type/spacing treatment that addresses that problem, with reference evidence when useful |
+| Compare | What should become easier to scan or use, and what identity must remain recognizable |
+
+“Keep the style” locks the identified visual relationships, not every card boundary or position. “Polish spacing only” is a narrower instruction and should stay narrow. If the user asks for more substantial improvement, consider different information arrangements internally where needed; choose by task fit rather than requiring a fixed number of variants. Combining cards, removing cards, or expanding white space is a choice, not an improvement by itself.
+
+For a long category name in a mobile report, the acceptance question is whether names, amounts and percentages can be compared at the target size. Test actual content; smaller text that merely prevents overflow is not a visual solution. If folding details improves density, retain a clear access route and respect requests to show everything.

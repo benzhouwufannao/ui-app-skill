@@ -5,7 +5,7 @@ description: 设计、优化或评审 iOS/Android 手机 App 界面，交付可�
 
 # UI App Design
 
-Create a mobile experience that people can inspect, continue editing, and operate when an interactive artifact is requested. Preserve the user's product, platform, accepted choices, and requested scope. Public references and other skills inform decisions; they do not replace the brief or require a paid service.
+Focus on mobile information hierarchy, readable real content, and usable task flows. Create a mobile experience that people can inspect, continue editing, and operate when an interactive artifact is requested. Preserve the user's product, platform, accepted choices, and requested scope. Public references and other skills inform decisions; they do not replace the brief or require a paid service.
 
 ## Route the request and deliverable
 
@@ -122,7 +122,7 @@ Keep utility icons familiar and coherent. Brand-bearing category or feature icon
 
 ## 6. Verify and deliver
 
-Read [quality-gate.md](references/quality-gate.md). Inspect changed key screens, including scrollable content, and exercise the primary journey and relevant recovery. For standalone HTML, run the layout measurement and repair procedure; for inline or native work, use the corresponding environment's checks. No runtime errors does not establish visual quality.
+Read [quality-gate.md](references/quality-gate.md). For authored HTML, the optional `scripts/check-mobile.cjs` can collect screenshots and layout/text/target candidates when Playwright is available; review findings rather than treating heuristic counts as a design score. When evaluating changes to this skill itself, use [evaluation-briefs.md](examples/evaluation-briefs.md) for distinct product tasks and preserve raw outcomes; ordinary page delivery does not require running the evaluation suite. Inspect changed key screens, including scrollable content, and exercise the primary journey and relevant recovery. For standalone HTML, run the layout measurement and repair procedure; for inline or native work, use the corresponding environment's checks. No runtime errors does not establish visual quality.
 
 For substantial visual work, inspect first-view focus, realistic content, image crop, icon coherence, repeated components, and text contrast at actual size. Grayscale/blur can help diagnose hierarchy; they need not be repeated for an unrelated functional edit. Compare against the recorded reference decisions, not a generic taste score.
 

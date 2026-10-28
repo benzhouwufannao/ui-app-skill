@@ -105,6 +105,19 @@ git clone https://github.com/benzhouwufannao/ui-app-skill.git ~/.codex/skills/ui
 - 环境不足时明确未验证项，不将 HTML 的可实现性当作其他平台支持的证据。
 - 普通营销网站、纯桌面后台和纯后端任务不属于此 Skill 的主要范围。
 
+## 检查 HTML 成品
+
+提供可选的 Playwright 检查脚本。请在有 Playwright 的环境运行；如需安装，可在独立工具目录安装 `playwright` 并安装其 Chromium，或使用现有浏览器配置。脚本不会自行安装依赖。
+
+```bash
+node scripts/check-mobile.cjs /path/to/page.html --out /path/to/check-output
+# 使用本机 Chrome：追加 --channel chrome
+```
+
+默认检查 320 / 375 / 390px，在最窄尺寸额外检查 130% 文字，输出顶部、整页、底部截图和 JSON。发现页面溢出或运行错误退出码为 1，执行失败为 2。小字、触控区域和截断候选需要结合上下文判断；脚本不验证审美、业务正确性或完整交互。
+
+[三类可复现验证题](examples/evaluation-briefs.md)用于检查消费类页面、表单恢复和数据比较。目前提供的是评估方法，尚未发布跨 Skill 效果结论。
+
 ## 给出有效反馈
 
 欢迎通过 [Issues](https://github.com/benzhouwufannao/ui-app-skill/issues) 提供问题或使用案例。请尽量包含：任务原文、Agent/模型、目标平台、输入截图、实际结果和你期望改善的位置。请先移除客户信息、凭据及不便公开的数据。
